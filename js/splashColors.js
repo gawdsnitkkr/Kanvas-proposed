@@ -12,7 +12,7 @@
         _Functions = {
 
             /*
-                generates random hex color values each second
+             generates random hex color values each second
              */
             CreateAnimation : function() {
                 w.requestAnimationFrame(_Functions.CreateAnimation);
@@ -57,11 +57,11 @@
         }
 
     /*
-    *   Things to do bro :)
-    *   Create canvas
-    *   then create random colors
-    *   create circles for the colors on the canvas
-    */
+     *   Things to do bro :)
+     *   Create canvas
+     *   then create random colors
+     *   create circles for the colors on the canvas
+     */
     $(w).on('load', function() {
         canvas = document.getElementById('canv');
         ctx = canvas.getContext('2d');
@@ -70,9 +70,9 @@
         _Functions.CreateAnimation();
     });
 
-    $('w').on('resize', function() {
-       canvas.width = w.innerWidth;
-       canvas.height = w.innerHeight;
+    $(w).on('resize', function() {
+        canvas.width = w.innerWidth;
+        canvas.height = w.innerHeight;
     });
 
 })(jQuery, window, document);
