@@ -136,7 +136,7 @@ html,body {
     /*border: 2px solid red;*/
     padding: 30px;
     position: absolute;
-    font-size: 16px;
+    font-size: 1em;
     letter-spacing: 0.05em;
     font-weight:500;
     color:rgb(44, 44, 44);
@@ -210,8 +210,13 @@ html,body {
     }
 
     .description {
-        font-size: 12px;
-        padding-left:5px;
+        font-size: 0.9em;
+        padding-left:8px;
         padding-right: 5px;
+    }
+
+    .max-section-part {
+        padding: 0px;
+        margin: 0px;
     }
 }
