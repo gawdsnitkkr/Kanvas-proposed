@@ -48,7 +48,7 @@
             },
 
             CreateSpot : function(x, y, r, col) {
-                console.log('creating spot');
+                // console.log('creating spot');
                 ctx.fillStyle = 'rgba(' + col.r + ',' + col.g + ',' + col.b + ',' + col.a + ')';
                 ctx.beginPath();
                 ctx.arc(x, y, r, 0, Math.PI * 2, false);
