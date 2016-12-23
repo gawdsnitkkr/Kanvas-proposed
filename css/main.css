@@ -5,13 +5,26 @@
     src : url(../assets/fonts/Cookie-Regular.ttf);
 }
 
-body {
+html,body {
     width:100%;
-    overflow:hidden;
     margin:0;
-    cursor:pointer;
+    height: 100%;
+    padding: 0px;
 }
-h1 {
+
+.section {
+    position: relative;
+    top:0px;
+    height: 100%;
+    left: 0px;
+    padding: 0px;
+    margin: 0px;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+/** css for the home section */
+#home-section h1 {
     position: absolute;
     top: 40%;
     left: 0px;
@@ -20,6 +33,61 @@ h1 {
     width: 100%;
     color: black;
     font-family: Cookie;
-    color:transparent;
-    -webkit-text-stroke: 1px hsla(0,0%,0%,.3);
+    color:black;
+    /*-webkit-text-stroke: 1px hsla(0,0%,0%,.3);*/
+}
+
+
+/** css for the nav bar inside the home section */
+.nav-bar {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0px;
+    top:55%;
+}
+
+.nav-bar a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: Cookie;
+    font-size:2em;
+    text-align: center;
+    margin-left: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+/** class for all the mini divs inside the sections */
+.mini-div {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+.mini-section-part {
+    height: 100%;
+    width: 30%;
+    background-color: rgb(44, 44, 44);
+}
+
+.make-left {
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+
+.make-right {
+    position: absolute;
+    top:0px;
+    right:0px;
+}
+.max-section-part {
+    height: 100%;
+    width: 70%;
+    background-color:white;
+}
+
+#home-section {
+    height: 100%;
 }
