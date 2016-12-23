@@ -19,8 +19,6 @@
              */
             CreateAnimation : function() {
                 function hailAnimate() {
-                    console.log('running animation');
-                    console.log(time);
                     if(doAnimation) {
                         w.requestAnimationFrame(hailAnimate);
                         var px = Math.floor(Math.random() * canvas.width);
@@ -89,7 +87,7 @@
                 else {
                     animationTime = 1000;
                 }
-                console.log(animationTime);
+                // console.log(animationTime);
             }
         }
 
