@@ -124,25 +124,31 @@ html,body {
     right:38px;
     margin-top: 50px;
     /*border: 2px solid green;*/
-    font-size: 15px;
     overflow-y: auto;
-    background-color: white;
+    /*background-color: white;*/
     background-image: url("../assets/images/white.png");
 }
 
 .description {
     padding: 20px;
+    font-family: Cookie;
+    font-size: 1.3em;
+}
+
+.description a {
+    text-decoration: none;
+    color: black;
+}
+
+.description-sub-heading {
+    font-weight: 800;
 }
 
 .about-image {
     height: 70%;
     width: 60%;
-    /*background-color: white;*/
     text-align: center;
     margin: auto;
-    /*width: 100%; !* or any custom size *!*/
-    /*height: 100%;*/
-    /*object-fit: contain;*/
 }
 
 .about-image img {
@@ -154,164 +160,3 @@ html,body {
 .heading {
     font-size: 2em;
 }
-/* new css ends here */
-
-/*!** class for all the mini divs inside the sections *!*/
-/*.mini-div {*/
-    /*margin: 0px;*/
-    /*padding: 0px;*/
-    /*height: 100%;*/
-/*}*/
-
-/*.mini-section-part {*/
-    /*height: 100%;*/
-    /*width: 35%;*/
-    /*text-align: center;*/
-    /*background-color: rgb(44, 44, 44);*/
-/*}*/
-
-/*.make-left {*/
-    /*position: absolute;*/
-    /*top:0px;*/
-    /*left:0px;*/
-/*}*/
-
-/*.make-right {*/
-    /*position: absolute;*/
-    /*top:0px;*/
-    /*right:0px;*/
-
-/*}*/
-/*.max-section-part {*/
-    /*height: 100%;*/
-    /*width: 65%;*/
-    /*background-color:white;*/
-    /*!*display: none;*!*/
-/*}*/
-
-/*#home-section {*/
-    /*height: 100%;*/
-/*}*/
-
-/*.about-image {*/
-    /*position: absolute;*/
-    /*height: 300px;*/
-    /*width: 300px;*/
-    /*top:25%;*/
-    /*left: 18%;*/
-    /*!*text-align: center;*!*/
-    /*!*position: absolute;*!*/
-    /*!*right:0px;*!*/
-/*}*/
-
-/*.about-image img{*/
-    /*width: 100%; !* or any custom size *!*/
-    /*height: 100%;*/
-    /*object-fit: contain;*/
-/*}*/
-
-/*.heading {*/
-    /*width: 100%;*/
-    /*margin: 0px;*/
-    /*left: 0px;*/
-    /*right:0px;*/
-    /*position: absolute;*/
-    /*text-align: center;*/
-    /*text-transform: uppercase;*/
-    /*padding-top: 10px;*/
-    /*padding-bottom: 5px;*/
-    /*letter-spacing: 0.1em;*/
-    /*color: rgb(255, 87, 34);*/
-/*}*/
-
-/*.description {*/
-    /*!*border: 2px solid red;*!*/
-    /*padding: 30px;*/
-    /*position: absolute;*/
-    /*font-size: 1em;*/
-    /*letter-spacing: 0.05em;*/
-    /*font-weight:500;*/
-    /*color:rgb(44, 44, 44);*/
-/*}*/
-
-/*.description a {*/
-    /*text-decoration: none;*/
-/*}*/
-
-/*.description span {*/
-    /*color: rgb(255, 87, 34);*/
-/*}*/
-
-/*#web-description-section .description {*/
-    /*top:20%;*/
-/*}*/
-
-/*#photography-description-section .description {*/
-    /*top:12%;*/
-/*}*/
-
-/*#design-description-section .description{*/
-    /*top:19%;*/
-/*}*/
-
-/*#caption-description-section .description {*/
-    /*top:35%;*/
-/*}*/
-
-/*@media(max-width: 960px) {*/
-
-    /*!* css for the home section *!*/
-    /*#home-section h1 {*/
-        /*font-size: 10vh;*/
-    /*}*/
-
-    /*.nav-bar {*/
-        /*top:48%;*/
-    /*}*/
-
-    /*.nav-bar a {*/
-        /*font-size:4vh;*/
-    /*}*/
-
-
-    /*!* css for the other section *!*/
-    /*.about-image {*/
-        /*display: none;*/
-    /*}*/
-
-    /*.mini-section-part {*/
-        /*width: 100%;*/
-        /*position: absolute;*/
-        /*top:0px;*/
-        /*left: 0px;*/
-        /*height:45px;*/
-    /*}*/
-
-    /*.mini-section-part h1 {*/
-        /*font-size: 17px;*/
-    /*}*/
-
-    /*.max-section-part {*/
-        /*position: absolute;*/
-        /*width: 100%;*/
-        /*top:45px;*/
-        /*left: 0px;*/
-        /*height: auto;*/
-        /*padding-left:10px;*/
-        /*padding-right: 10px;*/
-    /*}*/
-
-    /*.description {*/
-        /*font-size: 1.5vw;*/
-        /*padding-left:8px;*/
-        /*padding-right: 5px;*/
-        /*top:0px;*/
-        /*padding-top: 20px;*/
-        /*height: auto;*/
-    /*}*/
-
-    /*.max-section-part {*/
-        /*padding: 0px;*/
-        /*margin: 0px;*/
-    /*}*/
-/*}*/
