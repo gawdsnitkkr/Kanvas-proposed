@@ -55,7 +55,7 @@ html,body {
     font-family: Cookie;
     font-size:6vh;
     text-align: center;
-    margin-left: 10px;
+    margin-left: 15px;
     color: black;
     cursor: pointer;
 }
@@ -210,9 +210,12 @@ html,body {
     }
 
     .description {
-        font-size: 2.5vh;
+        font-size: 1.5vw;
         padding-left:8px;
         padding-right: 5px;
+        top:0px;
+        padding-top: 20px;
+        height: auto;
     }
 
     .max-section-part {
