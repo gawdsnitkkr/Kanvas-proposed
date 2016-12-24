@@ -32,7 +32,7 @@
                         };
                         _Functions.SpreadColors(px, py, pr, pCol);
                         if(time == animationTime) {
-                            // w.cancelAnimationFrame(hailAnimate);
+                            w.cancelAnimationFrame(hailAnimate);
                             doAnimation = false;
                             return;
                         }

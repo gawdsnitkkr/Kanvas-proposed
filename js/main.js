@@ -5,30 +5,44 @@
  */
 (function($, w, d) {
 
-    /*
-    *  if clicked on the link in the nav bar simply scroll
-    *  to the specified div having delay of 1s
-    */
-
     var homeSection = $('#home-section'),
         homeHeader = $('#home-section h1'),
         isHeaderSet = false,
-        currentlySetSection = '';
+        currentlySetSection = '',
+        closeButton = $('#close'),
+        isCloseButtonVisible = false,
+        setHeaderNavHeight = '1.5em',
+        unsetHeaderNavHeight = '6vh',
+        setHeaderTop = '0',
+        unSetHeaderTop = '28%',
+        setHeaderHeight = '2.5em' ,
+        unSetHeaderHeight = '12vh';
 
     _MainFunction = {
 
         SetHeader : function() {
             homeHeader.css({
-                'top' : '0',
-                'font-size' : '2.5em',
+                'top' : setHeaderTop,
+                'font-size' : setHeaderHeight
             });
 
             $('.nav-bar').addClass('nav-bar-after');
             $('.nav-bar a').css({
-                'font-size' : '1.5em'
+                'font-size' : setHeaderNavHeight
             });
             isHeaderSet = true;
             return _MainFunction;
+        },
+
+        unSetHeader : function() {
+            homeHeader.css({
+                'top' : unSetHeaderTop,
+                'font-size' : unSetHeaderHeight,
+            });
+            $('.nav-bar').removeClass('nav-bar-after');
+            $('.nav-bar a').css({
+                'font-size' : unsetHeaderNavHeight
+            });
         },
 
         setContentSection : function(sectionName) {
@@ -49,25 +63,42 @@
             $(currentSection).css({
                 'top' : '100%'
             });
+            return _MainFunction;
+        },
+
+        setCloseButton : function() {
+
+            if(!isCloseButtonVisible) {
+                closeButton.css({
+                    'display' : 'block'
+                });
+            }
+            isCloseButtonVisible = true;
+            return _MainFunction;
+        },
+
+        unSetCloseButton : function() {
+
+            if(isCloseButtonVisible) {
+                closeButton.css({
+                    'display' : 'none'
+                });
+            }
+
+            isCloseButtonVisible = false;
+            return _MainFunction;
         }
 
     }
 
-    // $(w).on('load', function() {
-    //     _MainFunction.SetHeader();
-    //     _MainFunction.setContentSection('#web-section');
-    // });
-
     $('.nav-bar a').on('click', function(e) {
         e.preventDefault();
         var clickedLinkSection = $(this).attr('href');
-        if(!isHeaderSet) {
-            _MainFunction.SetHeader();
-        }
-        _MainFunction.setContentSection(clickedLinkSection);
-        // $('html, body').animate({
-        //     scrollTop : $($(this).attr('href')).offset().top
-        // },500);
+        _MainFunction.SetHeader().setContentSection(clickedLinkSection).setCloseButton();
+    });
+
+    closeButton.on('click', function() {
+        _MainFunction.unSetCloseButton().unSetContentSection(currentlySetSection).unSetHeader();
     });
 
 })(jQuery, window, document);
