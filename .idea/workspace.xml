@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f64b223e-f2c2-4b16-be37-1af023a39872" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/splashColors.js" afterPath="$PROJECT_DIR$/js/splashColors.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,9 +19,9 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.70578086">
+    <splitter split-orientation="horizontal" split-proportion="0.9">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.8480392">
+        <splitter split-orientation="horizontal" split-proportion="0.88088375">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
@@ -51,8 +48,8 @@
               <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/js/main.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="108">
-                      <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+                    <state relative-caret-position="-473">
+                      <caret line="94" column="59" lean-forward="true" selection-start-line="94" selection-start-column="59" selection-end-line="94" selection-end-column="59" />
                       <folding />
                     </state>
                   </provider>
@@ -101,8 +98,8 @@
           <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1062">
-                  <caret line="68" column="18" lean-forward="true" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="18" />
+                <state relative-caret-position="72">
+                  <caret line="76" column="34" lean-forward="false" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -293,12 +290,12 @@
       <workItem from="1482500619401" duration="26356000" />
       <workItem from="1482561238516" duration="219000" />
       <workItem from="1482563248915" duration="3107000" />
-      <workItem from="1482567049514" duration="15666000" />
+      <workItem from="1482567049514" duration="19024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54482000" />
+    <option name="totallyTimeSpent" value="57840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -517,6 +514,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cookie/OFL.txt" />
+    <entry file="file://$PROJECT_DIR$/js/splashColors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="33" column="51" lean-forward="true" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -544,18 +549,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/splashColors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="33" column="51" lean-forward="true" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="-473">
+          <caret line="94" column="59" lean-forward="true" selection-start-line="94" selection-start-column="59" selection-end-line="94" selection-end-column="59" />
           <folding />
         </state>
       </provider>

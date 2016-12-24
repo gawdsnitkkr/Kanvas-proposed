@@ -43,6 +43,7 @@
             $('.nav-bar a').css({
                 'font-size' : unsetHeaderNavHeight
             });
+            return _MainFunction;
         },
 
         setContentSection : function(sectionName) {
@@ -87,6 +88,50 @@
 
             isCloseButtonVisible = false;
             return _MainFunction;
+        },
+
+        setSelectedLink : function(element) {
+
+            _MainFunction.applyOnMouseOverActionOnNavBar();
+            _MainFunction.DeactivateLink($('.nav-bar a'));
+            $(element).on('mouseout', function() {
+                $(element).css({
+                    'border-bottom' : '2px solid black'
+                });
+            });
+            _MainFunction.ActivateLink(element);
+        },
+
+        unSetSelectedLinks : function(element) {
+            $('.nav-bar a').css({
+                'border-bottom' : 'none'
+            });
+
+            _MainFunction.applyOnMouseOverActionOnNavBar();
+        },
+
+        applyOnMouseOverActionOnNavBar : function() {
+            $('.nav-bar a').on('mouseover', function() {
+                _MainFunction.ActivateLink($(this));
+            });
+
+            $('.nav-bar a').on('mouseout', function() {
+                _MainFunction.DeactivateLink($(this));
+            });
+        },
+
+        /* set the border bottom to 2px for the clicked link */
+        ActivateLink : function(element) {
+            $(element).css({
+               'border-bottom' : '2px solid black'
+            });
+        },
+
+        /* set the border bottom to none for the clicked link */
+        DeactivateLink : function(element) {
+            $(element).css({
+                'border-bottom' : 'none'
+            });
         }
 
     }
@@ -94,11 +139,12 @@
     $('.nav-bar a').on('click', function(e) {
         e.preventDefault();
         var clickedLinkSection = $(this).attr('href');
+        _MainFunction.setSelectedLink($(this));
         _MainFunction.SetHeader().setContentSection(clickedLinkSection).setCloseButton();
     });
 
     closeButton.on('click', function() {
-        _MainFunction.unSetCloseButton().unSetContentSection(currentlySetSection).unSetHeader();
+        _MainFunction.unSetCloseButton().unSetContentSection(currentlySetSection).unSetHeader().unSetSelectedLinks();
     });
 
 })(jQuery, window, document);
