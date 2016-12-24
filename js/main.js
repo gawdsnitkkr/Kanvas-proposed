@@ -53,10 +53,10 @@
 
     }
 
-    $(w).on('load', function() {
-        _MainFunction.SetHeader();
-        _MainFunction.setContentSection('#web-section');
-    });
+    // $(w).on('load', function() {
+    //     _MainFunction.SetHeader();
+    //     _MainFunction.setContentSection('#web-section');
+    // });
 
     $('.nav-bar a').on('click', function(e) {
         e.preventDefault();
