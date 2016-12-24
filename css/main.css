@@ -119,14 +119,19 @@ html,body {
 
 .max-section-part {
     height: 80%;
-    width: 60%;
+    width: 56%;
     position: absolute;
-    right:0px;
+    right:38px;
     margin-top: 50px;
     /*border: 2px solid green;*/
     font-size: 15px;
+    overflow-y: auto;
     background-color: white;
     background-image: url("../assets/images/white.png");
+}
+
+.description {
+    padding: 20px;
 }
 
 .about-image {
@@ -141,7 +146,9 @@ html,body {
 }
 
 .about-image img {
-    display: none;
+    width: 100%; /* or any custom size */
+    height: 100%;
+    object-fit: contain;
 }
 /* new css ends here */
 
