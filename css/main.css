@@ -99,6 +99,7 @@ html,body {
 
 #home-section {
     height: 100%;
+    /*position: fixed;*/
 }
 
 .about-image {
@@ -210,7 +211,7 @@ html,body {
     }
 
     .description {
-        font-size: 1.5vw;
+        font-size: 2vw;
         padding-left:8px;
         padding-right: 5px;
         top:0px;
