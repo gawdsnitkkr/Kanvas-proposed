@@ -34,9 +34,8 @@ html,body {
     /*font-size: 8em;*/
     font-size: 12vh;
     width: 100%;
-    color: black;
+    color : rgb(44, 44, 44);
     font-family: Cookie;
-    color:black;
     transition: all 0.3s ease;
     /*-webkit-text-stroke: 1px hsla(0,0%,0%,.3);*/
 }
@@ -69,7 +68,7 @@ html,body {
     font-size:6vh;
     text-align: center;
     margin-left: 15px;
-    color: black;
+    color : rgb(44, 44, 44);
     cursor: pointer;
 }
 
@@ -115,6 +114,7 @@ html,body {
 .mini-section-part h1 {
     width: 100%;
     text-align: center;
+    color : rgb(44, 44, 44);
 }
 
 .max-section-part {
@@ -133,11 +133,13 @@ html,body {
     padding: 20px;
     font-family: Cookie;
     font-size: 1.3em;
+    color : rgb(44, 44, 44);
 }
 
 .description a {
     text-decoration: none;
-    color: black;
+    /*color: black;*/
+    color : rgb(44, 44, 44);
 }
 
 .description-sub-heading {
@@ -165,8 +167,9 @@ html,body {
     position: absolute;
     top:0px;
     right:0px;
-    height: 50px;
-    width: 50px;
+    padding: 20px;
+    height: 25px;
+    width: 25px;
     z-index: 3;
     cursor: pointer;
     display:none;
