@@ -11,12 +11,14 @@
         currentlySetSection = '',
         closeButton = $('#close'),
         isCloseButtonVisible = false,
-        setHeaderNavHeight = '1.5em',
-        unsetHeaderNavHeight = '6vh',
-        setHeaderTop = '0',
-        unSetHeaderTop = '28%',
-        setHeaderHeight = '2.5em' ,
-        unSetHeaderHeight = '12vh';
+        setHeaderNavHeight,
+        unsetHeaderNavHeight,
+        setHeaderTop = 0,
+        unSetHeaderTop,
+        setHeaderHeight,
+        unSetHeaderHeight,
+        setHeaderNavTop,
+        unsetHeaderNavTop;
 
     _MainFunction = {
 
@@ -26,7 +28,9 @@
                 'font-size' : setHeaderHeight
             });
 
-            $('.nav-bar').addClass('nav-bar-after');
+            $('.nav-bar').css({
+                'top' : setHeaderNavTop
+            });
             $('.nav-bar a').css({
                 'font-size' : setHeaderNavHeight
             });
@@ -39,10 +43,14 @@
                 'top' : unSetHeaderTop,
                 'font-size' : unSetHeaderHeight,
             });
-            $('.nav-bar').removeClass('nav-bar-after');
+            $('.nav-bar').css({
+               'top' : unsetHeaderNavTop
+            });
             $('.nav-bar a').css({
                 'font-size' : unsetHeaderNavHeight
             });
+
+            isHeaderSet = false;
             return _MainFunction;
         },
 
@@ -123,7 +131,7 @@
         /* set the border bottom to 2px for the clicked link */
         ActivateLink : function(element) {
             $(element).css({
-               'border-bottom' : '2px solid black'
+                'border-bottom' : '2px solid black'
             });
         },
 
@@ -132,6 +140,52 @@
             $(element).css({
                 'border-bottom' : 'none'
             });
+        },
+
+        setDimension : function() {
+            var windowWidth = w.innerWidth;
+            if(windowWidth <= 670 && windowWidth > 400) {
+
+                setHeaderHeight = '2em';
+                setHeaderNavHeight = '1.2em';
+
+                unSetHeaderHeight = '8vh';
+                unsetHeaderNavHeight = '4vh';
+
+                unSetHeaderTop = '35%';
+                unsetHeaderNavTop = '50%';
+
+                setHeaderNavTop = '12%';
+
+            }
+            else if(windowWidth <= 400) {
+
+                setHeaderHeight = '2em';
+                setHeaderNavHeight = '1em';
+
+                unSetHeaderHeight = '7vh';
+                unsetHeaderNavHeight = '3.5vh';
+
+                unSetHeaderTop = '37%';
+                unsetHeaderNavTop = '50%';
+
+                setHeaderNavTop = '11%';
+
+            }
+            else if(windowWidth > 670) {
+
+                setHeaderHeight = '2.5em';
+                unSetHeaderHeight = '12vh';
+
+                setHeaderNavHeight = '1.5em';
+                unsetHeaderNavHeight = '6vh';
+
+                unSetHeaderTop = '28%';
+                unsetHeaderNavTop = '50%';
+
+                setHeaderNavTop = '13%';
+            }
+            return _MainFunction;
         }
 
     }
@@ -145,6 +199,20 @@
 
     closeButton.on('click', function() {
         _MainFunction.unSetCloseButton().unSetContentSection(currentlySetSection).unSetHeader().unSetSelectedLinks();
+    });
+
+    $(w).on('load', function() {
+       _MainFunction.setDimension();
+    });
+
+    $(w).on('resize', function() {
+        _MainFunction.setDimension();
+        if(!isHeaderSet) {
+            _MainFunction.unSetHeader();
+        }
+        else {
+            _MainFunction.SetHeader();
+        }
     });
 
 })(jQuery, window, document);
