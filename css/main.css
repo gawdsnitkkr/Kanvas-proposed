@@ -70,7 +70,7 @@ html,body {
     margin-left: 15px;
     color : rgb(44, 44, 44);
     cursor: pointer;
-    transition: all 0.5s ease;
+    /*transition: all 0.5s ease;*/
 }
 
 .nav-bar a:hover {
@@ -227,6 +227,11 @@ html,body {
     .description {
         font-size: 1.1em;
     }
+
+    #close {
+        height: 20px;
+        width: 20px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -239,6 +244,11 @@ html,body {
     .nav-bar a {
         font-size:3.5vh;
         margin-left: 5px;
+    }
+
+    #close {
+        height: 15px;
+        width: 15px;
     }
 
 }
@@ -254,4 +264,5 @@ html,body {
         font-size:3vh;
         margin-left: 5px;
     }
+
 }
