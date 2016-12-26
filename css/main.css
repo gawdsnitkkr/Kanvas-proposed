@@ -96,8 +96,9 @@ html,body {
 
 .event-section {
     z-index: -1;
-    top:100%;
+    top:110%;
     transition: all 0.3s ease;
+    overflow-y: hidden;
 }
 
 .mini-section-part {
@@ -126,8 +127,6 @@ html,body {
     margin-top: 50px;
     /*border: 2px solid green;*/
     overflow-y: auto;
-    /*background-color: white;*/
-    background-image: url("../assets/images/white.png");
 }
 
 .description {
@@ -194,9 +193,14 @@ html,body {
 }
 
 @media (max-width: 800px) {
-   .mini-section-part {
-       display: none;
-   }
+
+    html, body {
+        overflow-y: hidden;
+    }
+
+    .mini-section-part {
+        display: none;
+    }
 
     .max-section-part {
         width: 100%;
