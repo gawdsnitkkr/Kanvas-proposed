@@ -111,6 +111,7 @@
         },
 
         unSetSelectedLinks : function(element) {
+
             $('.nav-bar a').css({
                 'border-bottom' : 'none'
             });
@@ -119,6 +120,7 @@
         },
 
         applyOnMouseOverActionOnNavBar : function() {
+
             $('.nav-bar a').on('mouseover', function() {
                 _MainFunction.ActivateLink($(this));
             });

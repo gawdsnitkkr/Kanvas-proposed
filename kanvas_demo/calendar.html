@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>Calendar Demo</title>
+    	<style>
+    	    #clock {
+    	    	font-size: 2em;
+    	    }
+    	    #date {
+    	    	color: blue;
+    	    }
+    	</style>
+    </head>
+    <body>
+    	<div id="container">
+    		<div id="clock"></div>
+    		<div id="date"></div>
+    		<div id="calendar">
+    			<div id="heading">
+    				<span id="title"></span>
+    				<button id="buttonUp">Next</button>
+    				<button id="buttonDown">Previous</button>
+    			</div>
+    			<div id="content">
+    				<table>
+    					<thead>
+    						<tr>
+    							<th>Sun</th>
+    							<th>Mon</th>
+    							<th>Tue</th>
+    							<th>Wed</th>
+    							<th>Thu</th>
+    							<th>Fri</th>
+    							<th>Sat</th>
+    						</tr>
+    					</thead>
+    					<tbody>
+    					</tbody>
+    				</table>
+    			</div>
+    		</div>
+    	<div>
+    	<script type="text/javascript">
+    	    var clock, date, title, buttonUp, buttonDown, tbody;
+    	    clock = document.getElementById('clock');
+    	    date = document.getElementById('date');
+    	    title = document.getElementById('title');
+    	    buttonUp = document.getElementById('buttonUp');
+    	    buttonDown = document.getElementById('buttonDown');
+    	    tbody = document.getElementsByTagName('tbody')[0];
+    	    var d = new Date();
+    	    date.innerText = d.toDateString();
+    	    //displaying clock
+    	    setInterval(function() {
+    	    	var d = new Date();
+    	    	showClock(d);
+    	    }, 1000);
+    	    function showClock(d) {
+    	    	var h = d.getHours();
+    	    	var m = d.getMinutes();
+    	    	var s = d.getSeconds();
+    	    	var text = h + ':' + m + ':' + s;
+    	    	clock.innerText = text;
+    	    }
+    	    var monthList = 
+    	        [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+    	    function showCalendar() {
+    	    	var monthName = monthList[d.getMonth()];
+    	    	var year = d.getFullYear();
+    	    	title.innerText = monthName + ', ' + year;
+    	    	//Get the day as a number (1-31)
+    	    	var date = d.getDate();
+    	    	//getting date of same month on 1st day e.g 1dec, 1jan, 1nov etc
+    	    	var firstDate = new Date(d.getTime() - (date - 1) * 24 * 60 * 60 * 1000);
+    	    	//Get the weekday as a number (0-6)
+    	    	var firstDateDay = firstDate.getDay();
+    	    	var calendarBody = '<tr>';
+    	    	//maximumDays is the no of days in this month
+    	    	var i, maximumDays = new Date(year, d.getMonth() + 1, 0).getDate(), count = 0;
+    	    	for (i = 0; i < firstDateDay; i++) {
+    	    		calendarBody += '<td>-</td>';
+    	    		count++;
+    	    	}
+    	    	for (i = firstDateDay; i < maximumDays + firstDateDay; i++) {
+    	    		count++;
+    	    		calendarBody += '<td>' + (count - firstDateDay) + '</td>';
+    	    		if (count % 7 == 0) {
+    	    			calendarBody += '</tr><tr>';
+    	    		}
+    	    	}
+    	    	calendarBody += '</tr>';
+    	    	tbody.innerHTML = calendarBody;
+    	    }
+    	    showCalendar(d);
+    	    buttonUp.addEventListener('click', function() {
+    	    	d.setMonth(d.getMonth() + 1);
+    	    	showCalendar();
+    	    });
+    	    buttonDown.addEventListener('click', function() {
+    	    	d.setMonth(d.getMonth() - 1);
+    	    	showCalendar();
+    	    });
+    	</script>
+    </body>
+</html>

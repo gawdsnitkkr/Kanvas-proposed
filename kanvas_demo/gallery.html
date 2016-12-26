@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>Gallery Demo</title>
+    	<style>
+            html {
+                height: 100%;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+            #container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #ccc;
+            }
+            #gallery {
+                position: absolute;
+                top: 25%;
+                width: 60%;
+                left: 20%;
+                height: 50%;
+                border: 1px solid;
+                overflow: hidden;
+            }
+            .image {
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                transition: left ease .8s;
+            }
+            .image img {
+                width: 100%;
+                height: 100%;
+            }
+            #image1 {
+                left: 0;
+            }
+    	</style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="gallery">
+                <div class="image" id="image1">
+                    <img src="images/landing.jpg"/>
+                </div>
+                <div class="image" id="image2">
+                    <img src="images/kanvas.jpg"/>
+                </div>
+                <div class="image" id="image3">
+                    <img src="images/photography.jpg"/>
+                </div>
+            </div>
+            <button id="nextButton">Next</button>
+            <button id="previousButton">Previous</button>
+        </div>
+    	<script type="text/javascript">
+            var current = 1;
+            var nextButton = document.getElementById('nextButton');
+            var previousButton = document.getElementById('previousButton');
+            nextButton.addEventListener('click', function() {
+                if (current == 3) {
+                    return;
+                }
+                document.getElementById('image' + current).style.left = "100%";
+                current++;
+                document.getElementById('image' + current).style.left = "0%";
+            });
+            previousButton.addEventListener('click', function() {
+                if (current == 1) {
+                    return;
+                }
+                document.getElementById('image' + current).style.left = "-100%";
+                current--;
+                document.getElementById('image' + current).style.left = "0%";
+            });
+    	</script>
+    </body>
+</html>
