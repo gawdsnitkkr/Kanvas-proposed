@@ -72,6 +72,11 @@
             $(currentSection).css({
                 'top' : '100%'
             });
+            setTimeout(function() {
+                 $(currentSection).css({
+                     'display': 'none'
+                 });
+             }, 400);
             return _MainFunction;
         },
 
