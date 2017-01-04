@@ -1,0 +1,28 @@
+{
+  "name": "kanvas17",
+  "version": "1.0.0",
+  "description": "website for the kanvas'17",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify-main" : " cat ./js/main.js | uglifyjs > js/main.min.js",
+    "minify-splashColors" : "cat ./js/splashColors.js | uglifyjs > js/splashColors.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gawdsnitkkr/Kanvas-proposed.git"
+  },
+  "keywords": [
+    "kanvas",
+    "techspardha"
+  ],
+  "author": "abhishekg785 <abhishekg785@gmail.com> (http://abhishekg785.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gawdsnitkkr/Kanvas-proposed/issues"
+  },
+  "homepage": "https://github.com/gawdsnitkkr/Kanvas-proposed#readme",
+  "dependencies": {
+    "uglify": "^0.1.5"
+  }
+}

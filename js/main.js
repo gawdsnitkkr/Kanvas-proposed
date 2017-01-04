@@ -3,6 +3,7 @@
  *
  *  main.js
  */
+ 
 (function($, w, d) {
 
     var homeSection = $('#home-section'),
