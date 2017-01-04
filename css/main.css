@@ -37,7 +37,7 @@ html,body {
     width: 100%;
     color : rgb(44, 44, 44);
     font-family: Cookie;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
     /*-webkit-text-stroke: 1px hsla(0,0%,0%,.3);*/
 }
 
@@ -54,7 +54,7 @@ html,body {
     text-align: center;
     left: 0px;
     top:50%;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 .nav-bar-after {
