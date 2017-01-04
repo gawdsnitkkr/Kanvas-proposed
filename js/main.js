@@ -23,60 +23,73 @@
     _MainFunction = {
 
         SetHeader : function() {
-            homeHeader.css({
-                'top' : setHeaderTop,
-                'font-size' : setHeaderHeight
-            });
 
-            $('.nav-bar').css({
-                'top' : setHeaderNavTop
-            });
-            $('.nav-bar a').css({
-                'font-size' : setHeaderNavHeight
-            });
-            isHeaderSet = true;
+            if(!(isHeaderSet)) {
+                homeHeader.css({
+                    'top' : setHeaderTop,
+                    'font-size' : setHeaderHeight
+                });
+
+                $('.nav-bar').css({
+                    'top' : setHeaderNavTop
+                });
+                $('.nav-bar a').css({
+                    'font-size' : setHeaderNavHeight
+                });
+                isHeaderSet = true;
+            }
+
             return _MainFunction;
         },
 
         unSetHeader : function() {
-            homeHeader.css({
-                'top' : unSetHeaderTop,
-                'font-size' : unSetHeaderHeight,
-            });
-            $('.nav-bar').css({
-               'top' : unsetHeaderNavTop
-            });
-            $('.nav-bar a').css({
-                'font-size' : unsetHeaderNavHeight
-            });
 
-            isHeaderSet = false;
+            if(isHeaderSet) {
+                homeHeader.css({
+                    'top' : unSetHeaderTop,
+                    'font-size' : unSetHeaderHeight,
+                });
+                $('.nav-bar').css({
+                    'top' : unsetHeaderNavTop
+                });
+                $('.nav-bar a').css({
+                    'font-size' : unsetHeaderNavHeight
+                });
+                isHeaderSet = false;
+            }
+
             return _MainFunction;
         },
 
         setContentSection : function(sectionName) {
-            if(currentlySetSection != '') {
-                _MainFunction.unSetContentSection(currentlySetSection);
+
+            if(currentlySetSection != sectionName) {
+                if(currentlySetSection != '') {
+                    _MainFunction.unSetContentSection(currentlySetSection);
+                }
+                $(sectionName).css({
+                    'display' : 'block',
+                    'z-index' : '2',
+                    'top' : '20%'
+                });
+                $(sectionName).addClass('web-section-after');
+                currentlySetSection = sectionName;
             }
-            $(sectionName).css({
-                'display' : 'block',
-                'z-index' : '2',
-                'top' : '20%'
-            });
-            $(sectionName).addClass('web-section-after');
-            currentlySetSection = sectionName;
+
             return _MainFunction;
         },
 
         unSetContentSection : function(currentSection) {
+
             $(currentSection).css({
                 'top' : '100%'
             });
             setTimeout(function() {
-                 $(currentSection).css({
-                     'display': 'none'
-                 });
-             }, 400);
+                $(currentSection).css({
+                    'display': 'none'
+                });
+            }, 200);
+
             return _MainFunction;
         },
 
@@ -88,6 +101,7 @@
                 });
             }
             isCloseButtonVisible = true;
+
             return _MainFunction;
         },
 
@@ -100,6 +114,7 @@
             }
 
             isCloseButtonVisible = false;
+
             return _MainFunction;
         },
 
@@ -113,6 +128,8 @@
                 });
             });
             _MainFunction.ActivateLink(element);
+
+            return _MainFunction;
         },
 
         unSetSelectedLinks : function(element) {
@@ -192,6 +209,7 @@
 
                 setHeaderNavTop = '13%';
             }
+
             return _MainFunction;
         }
 
@@ -200,9 +218,6 @@
     $('.nav-bar a').on('click', function(e) {
         e.preventDefault();
         var clickedLinkSection = $(this).attr('href');
-        if (clickedLinkSection == currentlySetSection) {
-            return;
-        }
         _MainFunction.setSelectedLink($(this));
         _MainFunction.SetHeader().setContentSection(clickedLinkSection).setCloseButton();
     });
@@ -213,7 +228,7 @@
     });
 
     $(w).on('load', function() {
-       _MainFunction.setDimension();
+        _MainFunction.setDimension();
         $('.nav-bar a:nth-child(1)').click();
     });
 
